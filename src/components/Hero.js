@@ -1,11 +1,11 @@
 export default function Hero() {
-    return `
+  return `
     <section id="hero" class="relative h-screen flex items-center justify-center bg-brand-secondary text-white overflow-hidden">
       <!-- Background Overlay -->
       <div class="absolute inset-0 bg-black/50 z-10"></div>
       
-      <!-- Background Image (Placeholder) -->
-      <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544025162-d76690b67f61?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center"></div>
+      <!-- Background Image -->
+      <div class="absolute inset-0 bg-[url('/assets/Logo.png')] bg-contain bg-center bg-no-repeat"></div>
 
       <div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
         <h1 class="text-5xl md:text-7xl font-bold mb-6 text-brand-primary animate-fade-in-up">

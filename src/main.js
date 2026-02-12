@@ -1,4 +1,7 @@
 import './style.css';
+import Navbar from './components/Navbar.js';
+
+document.body.insertAdjacentHTML('afterbegin', Navbar());
 
 // Data - Official Branches with Map Links
 const BRANCHES = [
@@ -77,7 +80,7 @@ const DEFAULT_CONTENT = {
   images: {
     products: [
       { id: "main", url: "/assets/khaliya.png", alt: "بوكس الخلية" },
-      { id: "secondary", url: "/assets/mini.png", alt: "بوكس الميني ساندوتش" }
+      { id: "secondary", url: "/assets/mini (1).png", alt: "بوكس الميني ساندوتش" }
     ]
   }
 };
