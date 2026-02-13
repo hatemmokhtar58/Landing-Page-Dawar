@@ -179,7 +179,7 @@ a {
 
 @media (max-width: 768px) {
   .logo-nav {
-    top: 1rem;
+    top: 0.5rem;
     left: 50%;
     right: auto;
     transform: translateX(-50%);
