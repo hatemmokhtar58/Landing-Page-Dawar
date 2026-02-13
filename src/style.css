@@ -148,7 +148,7 @@ a {
 .logo-nav {
   position: absolute;
   top: 2rem;
-  right: 2rem;
+  right: 4rem;
   z-index: 1000;
   animation: logoAppear 1s ease-out;
 }
@@ -179,12 +179,14 @@ a {
 
 @media (max-width: 768px) {
   .logo-nav {
-    top: 1.5rem;
-    right: 1.5rem;
+    top: 1rem;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
   }
 
   .nav-logo {
-    width: 160px;
+    width: 140px;
   }
 }
 
@@ -1681,8 +1683,9 @@ footer {
   }
 
   .app-icon {
-    width: 64px;
-    height: 64px;
+    width: 85px;
+    height: 85px;
+    padding: 1.2rem;
   }
 
   .app-icon svg {
