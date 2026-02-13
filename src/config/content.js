@@ -21,9 +21,9 @@ export const DEFAULT_CONTENT = {
     { name: "Ninja", url: "#" }
   ],
   social: {
-    x: "#",
-    instagram: "#",
-    tiktok: "#"
+    x: "https://x.com/dawar_sa1",
+    instagram: "https://www.instagram.com/dawar_sa/",
+    tiktok: "https://www.tiktok.com/@dawaar_sa"
   },
   branches: [
     { region: "المنطقة الوسطى", branches: ["الرياض - الدرعية", "الرياض - الملقا", "الخرج"] },

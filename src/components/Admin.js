@@ -1,14 +1,14 @@
 import { saveContent, resetContent } from '../config/content.js';
 
 export const Admin = (initialData) => {
-  let data = JSON.parse(JSON.stringify(initialData)); // Deep copy
-  const PASSCODE = "1234"; // Simple gate
+    let data = JSON.parse(JSON.stringify(initialData)); // Deep copy
+    const PASSCODE = "1234"; // Simple gate
 
-  // State for session
-  const isAuthenticated = sessionStorage.getItem('admin_session') === 'true';
+    // State for session
+    const isAuthenticated = sessionStorage.getItem('admin_session') === 'true';
 
-  if (!isAuthenticated) {
-    return `
+    if (!isAuthenticated) {
+        return `
       <div class="min-h-screen flex items-center justify-center bg-slate-100 p-4">
         <div class="bg-white p-8 rounded-2xl shadow-xl max-w-sm w-full text-center">
             <h2 class="text-2xl font-bold mb-6 text-brand-secondary">لوحة التحكم</h2>
@@ -17,12 +17,12 @@ export const Admin = (initialData) => {
         </div>
       </div>
     `;
-  }
+    }
 
-  // Render Dashboard
-  setTimeout(() => initDashboard(data), 0);
-  
-  return `
+    // Render Dashboard
+    setTimeout(() => initDashboard(data), 0);
+
+    return `
     <div class="min-h-screen bg-slate-50 pb-20">
         <!-- Header -->
         <header class="bg-brand-secondary text-white py-4 px-6 shadow-md sticky top-0 z-50">
@@ -168,7 +168,7 @@ function initDashboard(data) {
         btn.addEventListener('click', () => {
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.replace('bg-brand-primary', 'hover:bg-slate-50'));
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.replace('text-white', 'text-slate-600'));
-            
+
             btn.classList.replace('hover:bg-slate-50', 'bg-brand-primary');
             btn.classList.replace('text-slate-600', 'text-white');
 
@@ -182,7 +182,7 @@ function initDashboard(data) {
     if (loginBtn) {
         loginBtn.addEventListener('click', () => {
             const pass = document.getElementById('admin-pass').value;
-             // Check passcode ("1234" hardcoded as requested)
+            // Check passcode ("1234" hardcoded as requested)
             if (pass === "1234") {
                 sessionStorage.setItem('admin_session', 'true');
                 window.location.reload();
@@ -201,7 +201,7 @@ function initDashboard(data) {
 
     // Save
     document.getElementById('save-btn')?.addEventListener('click', () => {
-        if(saveContent(window.dashboardData)) {
+        if (saveContent(window.dashboardData)) {
             const btn = document.getElementById('save-btn');
             const originalText = btn.textContent;
             btn.textContent = "تم الحفظ ✓";
@@ -245,7 +245,7 @@ window.handleImageUpload = (key, input) => {
 
 window.renderBranchesEditor = () => {
     const container = document.getElementById('branches-list');
-    if(!container) return;
+    if (!container) return;
 
     container.innerHTML = window.dashboardData.branches.map((region, rIndex) => `
         <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
@@ -276,7 +276,7 @@ window.addRegion = () => {
 };
 
 window.deleteRegion = (index) => {
-    if(confirm('حذف المنطقة بالكامل؟')) {
+    if (confirm('حذف المنطقة بالكامل؟')) {
         window.dashboardData.branches.splice(index, 1);
         renderBranchesEditor();
     }

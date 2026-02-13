@@ -8,39 +8,72 @@ const BRANCHES = [
   {
     region: "المنطقة الوسطى",
     branches: [
+      // الرياض
+      { name: "الرياض - العقيق", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+العقيق+الرياض" },
       { name: "الرياض - الدرعية", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الدرعية" },
       { name: "الرياض - الملقا", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الملقا" },
       { name: "الرياض - النرجس", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+النرجس" },
       { name: "الرياض - قرطبة", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+قرطبة" },
-      { name: "الرياض - لبن", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+لبن" },
       { name: "الرياض - طويق", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+طويق" },
-      { name: "الخرج", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الخرج" }
+      { name: "الرياض - المحمدية", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+المحمدية" },
+      { name: "الرياض - العارض", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+العارض" },
+      { name: "الرياض - الرحاب", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الرحاب" },
+      { name: "الرياض - المطار الشمالي", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+المطار+الشمالي" },
+      { name: "الرياض - المسيف", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+المسيف" },
+      { name: "الرياض - القدس", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+القدس+الرياض" },
+      { name: "الرياض - خريص", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+خريص" },
+      { name: "الرياض - الملز", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الملز" },
+      { name: "الرياض - الربيع", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الربيع" },
+      { name: "الرياض - السليمانية", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+السليمانية" },
+      { name: "الرياض - الرمال", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الرمال" },
+      { name: "الرياض - اليرموك", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+اليرموك" },
+      { name: "الرياض - النظيم", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+النظيم" },
+      { name: "الرياض - حطين", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+حطين" },
+      { name: "الرياض - البديعة", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+البديعة" },
+      { name: "الرياض - الحدا", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الحدا" },
+      { name: "الرياض - الروابي", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الروابي" },
+      { name: "الرياض - الفيحاء", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الفيحاء" },
+      { name: "الرياض - العوالي", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+العوالي+الرياض" },
+      { name: "الرياض - النخيل", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+النخيل" },
+      { name: "الرياض - الأحمدية", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الأحمدية" },
+      { name: "الرياض - العرقة", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+العرقة" },
+      { name: "الرياض - الشهداء", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الشهداء" },
+      { name: "الرياض - الوزارات", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الوزارات" },
+      { name: "الرياض - لبن", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+لبن" },
+
+      // الخرج
+      { name: "الخرج", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الخرج" },
+
+      // القصيم (مدمجة)
+      { name: "بريدة", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+بريدة" },
+      { name: "عنيزة", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+عنيزة" },
+      { name: "الرس", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الرس" }
     ]
   },
   {
     region: "المنطقة الغربية",
     branches: [
-      { name: "جدة - التحلية", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+جدة" },
+      { name: "جدة - التحلية", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+جدة+التحلية" },
       { name: "جدة - أبحر الشمالية", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+أبحر" },
-      { name: "مكة المكرمة - العوالي", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+مكة" },
+      { name: "مكة المكرمة - العوالي", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+مكة+العوالي" },
       { name: "مكة المكرمة - الشوقية", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الشوقية" },
       { name: "الطائف", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الطائف" },
-      { name: "المدينة المنورة", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+المدينة" }
+      { name: "المدينة المنورة", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+المدينة+المنورة" }
     ]
   },
   {
     region: "المنطقة الشرقية",
     branches: [
-      { name: "الدمام - الفيصلية", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الدمام" },
-      { name: "الدمام - الشاطئ", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الشاطئ" },
-      { name: "الخبر - العزيزية", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الخبر" },
+      { name: "الدمام - الفيصلية", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الدمام+الفيصلية" },
+      { name: "الدمام - الشاطئ", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الشاطئ+الدمام" },
+      { name: "الخبر - العزيزية", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الخبر+العزيزية" },
       { name: "الظهران", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الظهران" },
       { name: "الجبيل", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الجبيل" },
       { name: "الأحساء", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الأحساء" }
     ]
   },
   {
-    region: "المنطقة الجنوبيه",
+    region: "المنطقة الجنوبية",
     branches: [
       { name: "أبها", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+أبها" },
       { name: "خميس مشيط", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+خميس+مشيط" },
@@ -55,14 +88,6 @@ const BRANCHES = [
       { name: "حائل", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+حائل" },
       { name: "عرعر", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+عرعر" },
       { name: "الجوف", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الجوف" }
-    ]
-  },
-  {
-    region: "القصيم",
-    branches: [
-      { name: "بريدة", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+بريدة" },
-      { name: "عنيزة", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+عنيزة" },
-      { name: "الرس", mapsUrl: "https://www.google.com/maps/search/?api=1&query=دوار+السعادة+الرس" }
     ]
   },
   {
