@@ -1363,17 +1363,24 @@ a {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
-  overflow: hidden;
+  overflow-y: auto;
+  max-height: 300px;
   opacity: 0;
   transform: translateY(-10px) scale(0.95);
   pointer-events: none;
   transition: 0.3s var(--ease-out-back);
+  z-index: 1000;
 }
 
 .dropdown-menu.open {
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: all;
+}
+
+.custom-dropdown {
+  position: relative;
+  z-index: 1001;
 }
 
 .dropdown-item {
@@ -1437,8 +1444,10 @@ a {
   flex-direction: column;
   justify-content: space-between;
   text-align: right;
-  opacity: 0;
-  animation: cardReveal 0.6s var(--ease-out-expo) forwards;
+  /* opacity: 0; REMOVED to fix scroll issue */
+  /* animation: cardReveal... REMOVED */
+  opacity: 1;
+  transform: translateY(0);
   box-shadow: var(--shadow-sm);
 }
 
