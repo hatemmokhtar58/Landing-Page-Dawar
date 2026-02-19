@@ -1650,6 +1650,20 @@ footer {
   transform: translateY(0);
 }
 
+/* Ensure visibility on limited scroll/mobile */
+@media (max-width: 768px) {
+  .reveal {
+    transition-duration: 0.5s;
+    /* Reduced delay for mobile */
+  }
+
+  /* Force visibility if observer fails or on very small viewports */
+  .reveal:not(.active) {
+    opacity: 0.1;
+    /* Show very subtle ghost to ensure it's not "missing" if JS fails */
+  }
+}
+
 /* Text Selection */
 ::selection {
   background: var(--color-primary);

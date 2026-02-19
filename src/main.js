@@ -273,7 +273,7 @@ const renderGrid = () => {
   // Simple fade transition
   gridContainer.style.transition = 'opacity 0.2sease';
   gridContainer.style.opacity = '0';
-  
+
   setTimeout(() => {
     gridContainer.innerHTML = currentBranches.map((branch, index) => `
       <div class="branch-card" style="animation: fadeInUp 0.5s ease backwards ${index * 0.05}s">
@@ -291,7 +291,7 @@ const renderGrid = () => {
         </a>
       </div>
     `).join('');
-    
+
     gridContainer.style.opacity = '1';
   }, 200);
 };
@@ -349,6 +349,10 @@ const setupObserver = () => {
     return;
   }
 
+  const isMobile = window.innerWidth <= 768;
+  const threshold = isMobile ? 0.05 : 0.1; // Use lower threshold for mobile
+  const rootMargin = isMobile ? "0px 0px -20px 0px" : "0px 0px -50px 0px";
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -356,9 +360,21 @@ const setupObserver = () => {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+  }, { threshold: threshold, rootMargin: rootMargin });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Emergency fallback in case observer doesn't fire (e.g. very fast scroll or height calc issues)
+  if (isMobile) {
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.reveal:not(.active)').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.95) {
+          el.classList.add('active');
+        }
+      });
+    }, { passive: true });
+  }
 };
 
 // Smooth Anchor Scroll
