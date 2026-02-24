@@ -150,8 +150,8 @@ const RAW_BRANCHES = [
 const DEFAULT_CONTENT = {
   images: {
     products: [
-      { id: "main", url: "/assets/khaliya.png", alt: "بوكس الخلية" },
-      { id: "secondary", url: "/assets/mini (1).png", alt: "بوكس الميني ساندوتش" }
+      { id: "main", url: "/assets/khaliya.webp", alt: "بوكس الخلية" },
+      { id: "secondary", url: "/assets/mini (1).webp", alt: "بوكس الميني ساندوتش" }
     ]
   }
 };

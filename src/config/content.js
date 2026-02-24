@@ -9,8 +9,8 @@ export const DEFAULT_CONTENT = {
     description: "استمتع بأشهى المخبوزات والسندويشات المحضرة يومياً بكل حب. الخيار الأمثل لجمعاتكم وأوقاتكم السعيدة."
   },
   images: {
-    hero: "/assets/hero.jpg",
-    products: "/assets/khaliya.png"
+    hero: "/assets/hero.webp",
+    products: "/assets/khaliya.webp"
   },
   deliveryApps: [
     { name: "Jahez", url: "#" },
