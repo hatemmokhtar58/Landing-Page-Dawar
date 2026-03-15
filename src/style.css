@@ -1622,6 +1622,26 @@ footer {
   font-weight: 700;
 }
 
+.made-by {
+  font-size: 1rem;
+  color: rgba(255, 248, 240, 0.35);
+  margin: 0.4rem 0 0;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.hwzn-link {
+  color: rgba(230, 94, 40, 0.6);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.hwzn-link:hover {
+  color: var(--color-primary-light);
+  text-shadow: 0 0 8px rgba(230, 94, 40, 0.4);
+}
+
 /* =========================================
    ✨ ANIMATIONS & UTILITIES
    ========================================= */
