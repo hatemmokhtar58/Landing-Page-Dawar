@@ -146,53 +146,9 @@ const RAW_BRANCHES = [
   { region: "المنطقة الجنوبية", city: "سبت العلايا", name: "العزيزية", map: "https://maps.app.goo.gl/g7zhCKGqyjYTcjs56" }
 ];
 
-// Default Content Data
-const DEFAULT_CONTENT = {
-  images: {
-    products: [
-      { id: "main", url: "/assets/khaliya.webp", alt: "بوكس الخلية" },
-      { id: "secondary", url: "/assets/mini (1).webp", alt: "بوكس الميني ساندوتش" }
-    ]
-  }
-};
 
-// Load Content
-const loadContent = () => {
-  const stored = localStorage.getItem('dawar_landing_content');
-  return stored ? JSON.parse(stored) : DEFAULT_CONTENT;
-};
-
-const content = loadContent();
-
-// Render Products Dynamically
-const renderProducts = () => {
-  const mainImg = content.images.products.find(img => img.id === 'main');
-  const secondaryImg = content.images.products.find(img => img.id === 'secondary');
-
-  const mainPlaceholder = document.getElementById('img-placeholder-main');
-  const secondaryPlaceholder = document.getElementById('img-placeholder-secondary');
-
-  const setPlaceholderContent = (element, imgObj) => {
-    if (!element) return;
-
-    if (imgObj && imgObj.url) {
-      element.style.backgroundImage = `url('${imgObj.url}')`;
-      element.innerHTML = '';
-      element.classList.remove('placeholder-active');
-    } else {
-      element.style.backgroundImage = 'none';
-      element.innerHTML = '<span style="color:#888;font-size:0.9rem;text-align:center;">الصورة سيتم رفعها من لوحة التحكم</span>';
-      element.style.display = 'flex';
-      element.style.alignItems = 'center';
-      element.style.justifyContent = 'center';
-      element.style.backgroundColor = '#f0f0f0';
-      element.classList.add('placeholder-active');
-    }
-  };
-
-  setPlaceholderContent(mainPlaceholder, mainImg);
-  setPlaceholderContent(secondaryPlaceholder, secondaryImg);
-};
+const stored = localStorage.getItem('dawar_landing_content');
+const content = stored ? JSON.parse(stored) : {};
 
 // State
 let activeRegionIndex = 0;
@@ -391,8 +347,6 @@ const setupSmoothScroll = () => {
 // Initialize Application
 const initApp = () => {
   try {
-    // Render Components
-    renderProducts();
 
     if (document.getElementById('branches-dropdown-menu')) {
       renderDropdownOptions();
